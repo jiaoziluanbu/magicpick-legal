@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MagicPick 隐私政策</title>
+<style>
+  :root { color-scheme: light; }
+  body { font: 16px/1.7 -apple-system, "PingFang SC", system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 28px 20px 80px; color: #2a1f33; background: #fff; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  h2 { font-size: 18px; margin: 28px 0 8px; color: #6b4a7a; }
+  p, li { color: #333; }
+  ul { padding-left: 22px; }
+  .meta { color: #888; font-size: 13px; margin-bottom: 20px; }
+  .highlight { background: #f6efff; border-left: 3px solid #b793d6; padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
+  a { color: #6b4a7a; }
+</style>
+</head>
+<body>
+<h1>MagicPick 隐私政策</h1>
+<p class="meta">最后更新：2026-05-02 · 适用版本：v1.0 及以上</p>
+
+<div class="highlight">
+<strong>一句话承诺：</strong>MagicPick 所有照片分析都在你的 iPhone / iPad 本地完成，不会上传任何照片、缩略图、人脸特征或元数据到任何服务器。
+</div>
+
+<h2>1. 我们不收集什么</h2>
+<ul>
+  <li>不上传你的照片或视频</li>
+  <li>不上传缩略图、嵌入向量、人脸特征或聚类结果</li>
+  <li>不上传相册名称、文件名、拍摄时间、地理位置等元数据</li>
+  <li>不收集设备唯一标识（IDFA / IDFV）用于追踪</li>
+  <li>没有任何第三方分析、广告、崩溃上报 SDK</li>
+</ul>
+
+<h2>2. 本地存储的内容</h2>
+<p>下列数据仅保存在你的设备上，卸载 App 即清除：</p>
+<ul>
+  <li>扫描进度、相似分组结果、评分缓存（沙盒数据库）</li>
+  <li>偏好设置（如默认扫描范围、上次使用的相册）</li>
+  <li>调试模式下的扫描快照 JSON（仅 DEBUG 构建，正式版不生成）</li>
+</ul>
+
+<h2>3. 系统权限说明</h2>
+<ul>
+  <li><strong>照片库（读取）：</strong>用于扫描、识别相似/重复/低质量照片。可选择"完整访问"或"仅选定的照片"。</li>
+  <li><strong>照片库（添加）：</strong>仅在你主动恢复一张已删除的照片时使用。</li>
+</ul>
+
+<h2>4. AI 模型</h2>
+<p>MagicPick 使用若干端侧机器学习模型完成图像分类、画质评分、相似检测和人脸分组等功能。所有模型推理过程均在你的设备本地完成，不会向任何服务器发送图像或推理结果。</p>
+<p>模型权重文件由 App Store 通过 Apple 官方 CDN 按需分发到本地，下载过程由系统接管，不携带任何个人信息或设备标识。</p>
+
+<h2>5. 删除照片</h2>
+<p>当你在 App 内删除照片时，调用的是 iOS 系统的 PhotoKit 接口。删除的照片会进入"最近删除"相册，30 天内可恢复。MagicPick 不会绕过系统机制直接销毁文件。</p>
+
+<h2>6. 儿童隐私</h2>
+<p>MagicPick 不面向 13 岁以下儿童设计，也不会有意收集任何儿童的个人信息。</p>
+
+<h2>7. 政策变更</h2>
+<p>如本政策有更新，我们会在 App 内提示，并在本页面更新"最后更新"日期。</p>
+
+<h2>8. 联系我们</h2>
+<p>邮件：<a href="mailto:jiaozi1002@gmail.com">jiaozi1002@gmail.com</a></p>
+</body>
+</html>
