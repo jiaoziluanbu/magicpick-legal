@@ -1,66 +1,130 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MagicPick 隐私政策</title>
+<title>MagicPick Privacy Policy</title>
 <style>
   :root { color-scheme: light; }
-  body { font: 16px/1.7 -apple-system, "PingFang SC", system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 28px 20px 80px; color: #2a1f33; background: #fff; }
+  body { font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", system-ui, sans-serif; max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; color: #2a1f33; background: #fff; }
   h1 { font-size: 26px; margin: 0 0 6px; }
   h2 { font-size: 18px; margin: 28px 0 8px; color: #6b4a7a; }
   p, li { color: #333; }
   ul { padding-left: 22px; }
+  a { color: #6b4a7a; }
   .meta { color: #888; font-size: 13px; margin-bottom: 20px; }
   .highlight { background: #f6efff; border-left: 3px solid #b793d6; padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
-  a { color: #6b4a7a; }
+  .lang-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+  .lang-switch a { border: 1px solid #e4d9eb; border-radius: 999px; padding: 4px 10px; text-decoration: none; font-size: 13px; }
+  section[data-lang] { display: none; }
+  section[data-lang].active { display: block; }
 </style>
 </head>
 <body>
+<nav class="lang-switch">
+  <a href="?lang=zh-Hans">简体中文</a>
+  <a href="?lang=en">English</a>
+  <a href="?lang=ja">日本語</a>
+  <a href="?lang=ko">한국어</a>
+</nav>
+
+<section data-lang="zh-Hans">
 <h1>MagicPick 隐私政策</h1>
-<p class="meta">最后更新：2026-05-02 · 适用版本：v1.0 及以上</p>
-
-<div class="highlight">
-<strong>一句话承诺：</strong>MagicPick 所有照片分析都在你的 iPhone / iPad 本地完成，不会上传任何照片、缩略图、人脸特征或元数据到任何服务器。
-</div>
-
+<p class="meta">最后更新：2026-05-24 · 适用版本：v1.0 及以上</p>
+<div class="highlight"><strong>一句话承诺：</strong>MagicPick 所有照片分析都在你的 iPhone / iPad 本地完成，不会上传任何照片、缩略图、人脸特征或元数据到任何服务器。</div>
 <h2>1. 我们不收集什么</h2>
-<ul>
-  <li>不上传你的照片或视频</li>
-  <li>不上传缩略图、嵌入向量、人脸特征或聚类结果</li>
-  <li>不上传相册名称、文件名、拍摄时间、地理位置等元数据</li>
-  <li>不收集设备唯一标识（IDFA / IDFV）用于追踪</li>
-  <li>没有任何第三方分析、广告、崩溃上报 SDK</li>
-</ul>
-
+<ul><li>不上传你的照片或视频</li><li>不上传缩略图、嵌入向量、人脸特征或聚类结果</li><li>不上传相册名称、文件名、拍摄时间、地理位置等元数据</li><li>不收集设备唯一标识用于追踪</li><li>没有第三方分析、广告、崩溃上报 SDK</li></ul>
 <h2>2. 本地存储的内容</h2>
-<p>下列数据仅保存在你的设备上，卸载 App 即清除：</p>
-<ul>
-  <li>扫描进度、相似分组结果、评分缓存（沙盒数据库）</li>
-  <li>偏好设置（如默认扫描范围、上次使用的相册）</li>
-  <li>调试模式下的扫描快照 JSON（仅 DEBUG 构建，正式版不生成）</li>
-</ul>
-
+<p>扫描进度、相似分组、评分缓存、偏好设置和 DEBUG 构建中的扫描快照仅保存在你的设备上，卸载 App 即清除。</p>
 <h2>3. 系统权限说明</h2>
-<ul>
-  <li><strong>照片库（读取）：</strong>用于扫描、识别相似/重复/低质量照片。可选择"完整访问"或"仅选定的照片"。</li>
-  <li><strong>照片库（添加）：</strong>仅在你主动恢复一张已删除的照片时使用。</li>
-</ul>
-
+<ul><li><strong>照片库读取：</strong>用于扫描、识别相似/重复/低质量照片。可选择完整访问或仅选定的照片。</li><li><strong>照片库添加：</strong>仅在你主动恢复一张已删除的照片时使用。</li></ul>
 <h2>4. AI 模型</h2>
-<p>MagicPick 使用若干端侧机器学习模型完成图像分类、画质评分、相似检测和人脸分组等功能。所有模型推理过程均在你的设备本地完成，不会向任何服务器发送图像或推理结果。</p>
-<p>模型权重文件由 App Store 通过 Apple 官方 CDN 按需分发到本地，下载过程由系统接管，不携带任何个人信息或设备标识。</p>
-
+<p>MagicPick 使用端侧机器学习模型完成图像分类、评分、相似检测和人脸分组。推理过程均在本地完成，不会发送图像或结果。模型文件由 Apple 官方 CDN 按需分发，不携带个人照片内容。</p>
 <h2>5. 删除照片</h2>
-<p>当你在 App 内删除照片时，调用的是 iOS 系统的 PhotoKit 接口。删除的照片会进入"最近删除"相册，30 天内可恢复。MagicPick 不会绕过系统机制直接销毁文件。</p>
-
+<p>删除操作调用 iOS PhotoKit，照片会进入“最近删除”，30 天内可恢复。</p>
 <h2>6. 儿童隐私</h2>
-<p>MagicPick 不面向 13 岁以下儿童设计，也不会有意收集任何儿童的个人信息。</p>
-
+<p>MagicPick 不面向 13 岁以下儿童设计，也不会有意收集儿童个人信息。</p>
 <h2>7. 政策变更</h2>
-<p>如本政策有更新，我们会在 App 内提示，并在本页面更新"最后更新"日期。</p>
-
+<p>如本政策更新，我们会在本页面更新最后更新日期。</p>
 <h2>8. 联系我们</h2>
 <p>邮件：<a href="mailto:jiaozi1002@gmail.com">jiaozi1002@gmail.com</a></p>
+</section>
+
+<section data-lang="en">
+<h1>MagicPick Privacy Policy</h1>
+<p class="meta">Last updated: May 24, 2026 · Applies to version 1.0 and later</p>
+<div class="highlight"><strong>Our promise:</strong> MagicPick analyzes your photos locally on your iPhone or iPad. We do not upload photos, thumbnails, face features, or metadata to any server.</div>
+<h2>1. What We Do Not Collect</h2>
+<ul><li>We do not upload your photos or videos.</li><li>We do not upload thumbnails, embeddings, face features, or clustering results.</li><li>We do not upload album names, filenames, capture times, locations, or other photo metadata.</li><li>We do not collect device identifiers for tracking.</li><li>We do not include third-party analytics, advertising, or crash-reporting SDKs.</li></ul>
+<h2>2. Local Data</h2>
+<p>Scan progress, similar groups, score caches, preferences, and DEBUG-only scan snapshots stay on your device and are removed when you uninstall the app.</p>
+<h2>3. Permissions</h2>
+<ul><li><strong>Photo Library read access:</strong> used to scan and identify duplicate, similar, and low-quality photos. You may grant full access or selected photo access.</li><li><strong>Photo Library add access:</strong> used only when you choose to restore a deleted photo.</li></ul>
+<h2>4. AI Models</h2>
+<p>MagicPick uses on-device machine learning models for classification, scoring, similarity detection, and face grouping. Inference stays local. Model files are delivered on demand through Apple infrastructure and do not contain your photo content.</p>
+<h2>5. Deleting Photos</h2>
+<p>Photo deletion uses iOS PhotoKit. Deleted photos move to Recently Deleted and can be restored within 30 days.</p>
+<h2>6. Children’s Privacy</h2>
+<p>MagicPick is not designed for children under 13 and does not knowingly collect children’s personal information.</p>
+<h2>7. Changes</h2>
+<p>If this policy changes, we will update the last updated date on this page.</p>
+<h2>8. Contact</h2>
+<p>Email: <a href="mailto:jiaozi1002@gmail.com">jiaozi1002@gmail.com</a></p>
+</section>
+
+<section data-lang="ja">
+<h1>MagicPick プライバシーポリシー</h1>
+<p class="meta">最終更新日：2026年5月24日 · v1.0以降に適用</p>
+<div class="highlight"><strong>お約束：</strong>MagicPickの写真解析はiPhone / iPad上でローカルに完結します。写真、サムネイル、顔特徴量、メタデータをサーバーへアップロードしません。</div>
+<h2>1. 収集しない情報</h2>
+<ul><li>写真や動画をアップロードしません。</li><li>サムネイル、埋め込み、顔特徴量、クラスタリング結果をアップロードしません。</li><li>アルバム名、ファイル名、撮影日時、位置情報などのメタデータをアップロードしません。</li><li>追跡目的の端末識別子を収集しません。</li><li>第三者の解析、広告、クラッシュレポートSDKは含みません。</li></ul>
+<h2>2. 端末内に保存されるデータ</h2>
+<p>スキャン進捗、類似グループ、スコアキャッシュ、設定、DEBUG版のスナップショットは端末内に保存され、アプリ削除時に消去されます。</p>
+<h2>3. 権限</h2>
+<ul><li><strong>写真ライブラリの読み取り：</strong>重複、類似、低品質な写真の検出に使用します。フルアクセスまたは選択した写真のみを許可できます。</li><li><strong>写真ライブラリへの追加：</strong>削除した写真を復元する場合にのみ使用します。</li></ul>
+<h2>4. AIモデル</h2>
+<p>分類、スコアリング、類似検出、顔グループ化には端末内機械学習モデルを使用します。推論はローカルで完結し、モデルファイルはAppleの仕組みで必要時に配信されます。</p>
+<h2>5. 写真の削除</h2>
+<p>削除はiOSのPhotoKitを利用します。削除した写真は「最近削除した項目」に移動し、30日以内に復元できます。</p>
+<h2>6. 子どものプライバシー</h2>
+<p>MagicPickは13歳未満の子どもを対象としておらず、子どもの個人情報を意図的に収集しません。</p>
+<h2>7. 変更</h2>
+<p>本ポリシーを変更した場合、このページの最終更新日を更新します。</p>
+<h2>8. お問い合わせ</h2>
+<p>メール：<a href="mailto:jiaozi1002@gmail.com">jiaozi1002@gmail.com</a></p>
+</section>
+
+<section data-lang="ko">
+<h1>MagicPick 개인정보 처리방침</h1>
+<p class="meta">최종 업데이트: 2026년 5월 24일 · v1.0 이상 적용</p>
+<div class="highlight"><strong>약속드립니다:</strong> MagicPick의 모든 사진 분석은 iPhone / iPad에서 로컬로 처리됩니다. 사진, 썸네일, 얼굴 특징, 메타데이터를 서버로 업로드하지 않습니다.</div>
+<h2>1. 수집하지 않는 정보</h2>
+<ul><li>사진이나 동영상을 업로드하지 않습니다.</li><li>썸네일, 임베딩, 얼굴 특징, 그룹화 결과를 업로드하지 않습니다.</li><li>앨범명, 파일명, 촬영 시간, 위치 등 메타데이터를 업로드하지 않습니다.</li><li>추적 목적의 기기 식별자를 수집하지 않습니다.</li><li>타사 분석, 광고, 크래시 리포트 SDK를 포함하지 않습니다.</li></ul>
+<h2>2. 기기에 저장되는 데이터</h2>
+<p>스캔 진행 상태, 유사 그룹, 점수 캐시, 설정, DEBUG 빌드의 스냅샷은 기기에만 저장되며 앱 삭제 시 제거됩니다.</p>
+<h2>3. 권한</h2>
+<ul><li><strong>사진 보관함 읽기:</strong> 중복, 유사, 저품질 사진을 찾는 데 사용합니다. 전체 접근 또는 선택한 사진 접근을 허용할 수 있습니다.</li><li><strong>사진 보관함 추가:</strong> 삭제한 사진을 복원하도록 선택한 경우에만 사용합니다.</li></ul>
+<h2>4. AI 모델</h2>
+<p>MagicPick은 분류, 점수화, 유사도 감지, 얼굴 그룹화를 위해 온디바이스 머신러닝 모델을 사용합니다. 추론은 로컬에서만 실행되며 모델 파일은 Apple 인프라를 통해 필요 시 제공됩니다.</p>
+<h2>5. 사진 삭제</h2>
+<p>삭제는 iOS PhotoKit을 사용합니다. 삭제한 사진은 최근 삭제된 항목으로 이동하며 30일 이내 복원할 수 있습니다.</p>
+<h2>6. 아동 개인정보</h2>
+<p>MagicPick은 만 13세 미만 아동을 대상으로 하지 않으며 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+<h2>7. 변경</h2>
+<p>본 방침이 변경되면 이 페이지의 최종 업데이트 날짜를 갱신합니다.</p>
+<h2>8. 문의</h2>
+<p>이메일: <a href="mailto:jiaozi1002@gmail.com">jiaozi1002@gmail.com</a></p>
+</section>
+
+<script>
+  const supported = ["zh-Hans", "en", "ja", "ko"];
+  const params = new URLSearchParams(location.search);
+  const requested = params.get("lang");
+  const browser = navigator.language || "en";
+  const lang = supported.includes(requested) ? requested :
+    (browser.startsWith("zh") ? "zh-Hans" : browser.startsWith("ja") ? "ja" : browser.startsWith("ko") ? "ko" : "en");
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-lang]").forEach(section => section.classList.toggle("active", section.dataset.lang === lang));
+</script>
 </body>
 </html>
